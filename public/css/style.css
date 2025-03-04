@@ -1,0 +1,54 @@
+.landing-page {
+    background-color: #1d1c29 !important;
+    direction: rtl;
+}
+
+.page-title,
+.page-sub-title,
+.page-content,
+label {
+    color: #FFFFFF;
+}
+
+input,
+input:active,
+input:focus {
+    height: 70px !important;
+    width: 100% !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #a5a3b5 !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 30px !important;
+    margin-bottom: 20px !important;
+    background-color: #0a090f !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+}
+
+.input-error {
+    border: 1px solid #dc3545 !important;
+}
+
+button {
+    background-color: #28ce0a !important;
+    height: 70px !important;
+    width: 100% !important;
+    border: none !important;
+    border-radius: 3px !important;
+    font-size: 20px;
+}
+
+footer {
+    background-color: rgb(10, 9, 15) !important;
+    height: 108px;
+}
+
+footer p {
+    color: rgb(165, 163, 181);
+}
+
+footer p a {
+    color: rgb(165, 163, 181);
+}
