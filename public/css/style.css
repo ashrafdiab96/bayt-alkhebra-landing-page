@@ -3,6 +3,24 @@
     direction: rtl;
 }
 
+.book-img,
+.graph-img {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    .title {
+        color: #FFFFFF !important;
+        font-size: 20px !important;
+    }
+
+    img {
+        width: 80% !important;
+        margin: auto !important;
+    }
+}
+
 .page-title,
 .page-sub-title,
 .page-content,
@@ -31,13 +49,32 @@ input:focus {
     border: 1px solid #dc3545 !important;
 }
 
-button {
+button,
+.reg-btn {
     background-color: #28ce0a !important;
     height: 70px !important;
     width: 100% !important;
     border: none !important;
     border-radius: 3px !important;
-    font-size: 20px;
+    font-size: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.second {
+    background-color: #FFF !important;
+    width: 100% !important;
+    min-height: 500px !important;
+}
+
+.investment-list li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.second-title {
+    color: #191825;
 }
 
 footer {
