@@ -1,6 +1,28 @@
+body,
+html,
+div,
+a,
+p,
+* {
+    font-family: "Cairo", sans-serif !important;
+}
+
 .landing-page {
-    background-color: #1d1c29 !important;
     direction: rtl;
+    background-color: #1d1c29 !important;
+}
+
+.first {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    opacity: 0.02;
+    z-index: -1;
 }
 
 .book-img,
@@ -9,16 +31,27 @@
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
+}
 
-    .title {
-        color: #FFFFFF !important;
-        font-size: 20px !important;
-    }
+.book-img .title,
+.graph-img .title {
+    color: #FFFFFF !important;
+    font-size: 20px !important;
+}
 
-    img {
-        width: 80% !important;
-        margin: auto !important;
-    }
+.book-img {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.book-img img {
+    width: 50% !important;
+}
+
+.graph-img img {
+    width: 80% !important;
+    margin: auto !important;
 }
 
 .page-title,
@@ -26,6 +59,11 @@
 .page-content,
 label {
     color: #FFFFFF;
+}
+
+.page-content {
+    width: 80% !important;
+    margin: auto !important;
 }
 
 input,
@@ -77,6 +115,132 @@ button,
     color: #191825;
 }
 
+.about-section {
+    background-color: #fdf8f5;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    width: 360px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.vision-mission {
+    width: 360px;
+}
+
+.vision, .mission {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+h4 {
+    font-weight: bold;
+    color: #e25c4b;
+}
+
+p {
+    margin-top: 5px;
+    color: #666;
+    text-align: start;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.badge {
+    background: #ffe5e0;
+    color: #d9534f;
+    font-size: 14px;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.services-section {
+    background-color: #fdf8f5;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card p {
+    min-height: 150px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+h4 {
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+.get-advice {
+    background-color: #fd7e14 !important;
+    border-radius: 30px !important;
+    height: 36px !important;
+    font-size: 16px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 footer {
     background-color: rgb(10, 9, 15) !important;
     height: 108px;
@@ -88,4 +252,69 @@ footer p {
 
 footer p a {
     color: rgb(165, 163, 181);
+}
+
+@media (max-width: 820px) {
+    .header-link {
+        display: none !important;
+    }
+
+    .logo {
+        width: 80px !important;
+        height: 60px !important;
+    }
+
+    .main-sec {
+        padding-top: 0 !important;
+    }
+
+    .main-sec-row {
+        flex-direction: column-reverse;
+    }
+
+    .page-title {
+        margin-bottom: 10px !important;
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+
+    label {
+        font-size: 14px !important;
+    }
+
+    input,
+    input:active,
+    input:focus {
+        height: 40px !important;
+    }
+
+    button,
+    .reg-btn {
+        height: 40px !important;
+    }
+
+    .book-img {
+        margin-top: 40px;
+    }
+
+    .page-content {
+        width: 100% !important;
+        margin: auto !important;
+    }
+
+    .who-row {
+        flex-direction: column-reverse !important;
+    }
+
+    .icon {
+        left: 20px;
+    }
+
+    .vision-mission {
+        width: 100%;
+    }
+
+    .cards {
+        gap: 20px !important;
+    }
 }
