@@ -1,0 +1,43 @@
+body,
+html,
+div,
+a,
+p,
+* {
+    font-family: "Cairo", sans-serif !important;
+}
+
+body {
+    background-color: #1d1c29;
+    color: white !important;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #1A1A1A;
+    color: white !important;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+}
+
+.btn-download {
+    background-color: #32CD32;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-download:hover {
+    background-color: #28A428;
+}
+
+.success-icon {
+    width: 100px;
+    margin: auto;
+}

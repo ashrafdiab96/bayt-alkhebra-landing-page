@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ML9RCMZG');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Landing Page</title>
@@ -11,6 +18,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body class="landing-page">
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML9RCMZG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <header class="bg-transparent py-3">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -41,24 +52,6 @@
             </div>
             <div class="col-md-5 form-col px-5 py-5 order-3 order-md-3" id="regForm">
                 <h1 class="mb-4 font-bold page-title text-center">سجل بياناتك لتحميل الكتاب مجانا</h1>
-                @if(session('success'))
-                    <div class="alert success-msg">{!! session('success') !!}</div>
-                @endif
-
-                @if(session('downloadLink'))
-                    <script>
-                        window.onload = function() {
-                            var downloadLink = "{!! session('downloadLink') !!}";
-                            var a = document.createElement('a');
-                            a.href = downloadLink;
-                            a.download = ''; // Ensures the file downloads instead of opening
-                            document.body.appendChild(a);
-                            a.click();
-                            document.body.removeChild(a);
-                        };
-                    </script>
-                @endif
-
                 <form action="{{ route('form.submit') }}" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -113,10 +106,10 @@
                 <div class="col-lg-6 text-center">
                     <div class="ratio ratio-16x9">
                         <iframe
-                            src="https://www.youtube.com/embed/gEaaBGekfJk?si=bcVVgQBPNdTxESiZ&loop=1&playlist=gEaaBGekfJk&rel=0"
+                            src="https://www.youtube.com/embed/gEaaBGekfJk?autoplay=1&loop=1&playlist=gEaaBGekfJk&rel=0&modestbranding=1"
                             title="YouTube video player"
                             frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>

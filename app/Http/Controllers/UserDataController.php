@@ -31,10 +31,12 @@ class UserDataController extends Controller
 
         UserData::create($request->all());
 
-        $downloadLink = route('download.book');
-        session()->flash('success', "تم إرسال البيانات بنجاح! إذا لم يبدأ التحميل تلقائيًا، <a href='$downloadLink'>اضغط هنا</a>.");
-        session()->flash('downloadLink', $downloadLink);
-        return redirect()->back();
+        // $downloadLink = route('download.book');
+        // session()->flash('success', "تم إرسال البيانات بنجاح! إذا لم يبدأ التحميل تلقائيًا، <a href='$downloadLink'>اضغط هنا</a>.");
+        // session()->flash('downloadLink', $downloadLink);
+        // return redirect()->back();
+
+        return view('success');
     }
 
     public function downloadBook()
