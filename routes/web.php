@@ -16,4 +16,6 @@ Route::get('/users/export', function () {
     return Excel::download(new UsersExport, 'users.xlsx');
 })->name('users.export');
 
+Route::get('/download-book', [UserDataController::class, 'downloadBook'])->name('download.book');
+
 require __DIR__.'/auth.php';

@@ -16,12 +16,6 @@ class UserDataController extends Controller
     public function store(Request $request)
     {
         $messages = [
-            // 'name.required'  => 'The name field is required!',
-            // 'name.max'       => 'The name must not exceed 255 characters!',
-            // 'email.required' => 'The email field is required!',
-            // 'email.email'    => 'Please enter a valid email address!',
-            // 'phone.required' => 'The phone field is required!',
-
             'name.required'  => 'الاسم مطلوب',
             'name.max'       => 'الحد الأقصى 255 حرف',
             'email.required' => 'البريد الإلكتروني مطلوب',
@@ -37,6 +31,21 @@ class UserDataController extends Controller
 
         UserData::create($request->all());
 
-        return redirect()->back()->with('success', 'تم إرسال البيانات بنجاح!');
+        $downloadLink = route('download.book');
+        session()->flash('success', "تم إرسال البيانات بنجاح! إذا لم يبدأ التحميل تلقائيًا، <a href='$downloadLink'>اضغط هنا</a>.");
+        session()->flash('downloadLink', $downloadLink);
+        return redirect()->back();
+    }
+
+    public function downloadBook()
+    {
+        $bookPath = public_path('files/book.pdf');
+        $customFileName = 'القيمة العادلة لـ سهم البحر الأحمر 2024 .pdf';
+
+        if (file_exists($bookPath)) {
+            return response()->download($bookPath, $customFileName);
+        }
+
+        return redirect()->back()->with('error', 'حدث خطأ، لم يتم العثور على الكتاب.');
     }
 }
