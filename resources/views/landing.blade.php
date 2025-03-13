@@ -40,14 +40,17 @@
             <div class="col-md-7 order-2 order-md-1 text-center">
                 <div class="d-flex justify-content-center align-items-center flex-column book-img">
                     <div class="d-flex justify-content-center align-items-center gap-1 book-title-action">
-                        <div class="title text text-white text-center font-extrabold"> تقرير القيمه العادله سعر السهم مجانا </div>
+                        <div class="title text text-white text-center font-extrabold"> تقرير القيمة العادلة يكشف لك السهم الأقوى لعام 2025 بفرصة صعود 90% </div>
                     </div>
                     <img src="{{ asset('images/book-new.png') }}" alt="Placeholder Image" class="rounded">
                 </div>
                 <p class="page-content my-5">
-                    قبل كذا، أوصينا بشراء سهم البحر الأحمر لما توقعنا ارتفاعه 200%—وبالفعل تحقق خلال 2024.
+                    لا تدع تذبذب السوق يربكك!.
                     <br/>
-                    أما في 2025، فإحنا شايفين فرصة ذهبية في سهم متوقع صعوده 90% خلال الفترة الجاية، والتوقعات مبنية على تحليل دقيق للسوق.
+                    مع بيت الخبرة، لديك المفتاح لاكتشاف أفضل الفرص الاستثمارية.
+                    أوصينا بسهم البحر الأحمر قبل أن يرتفع 200% في 2024!
+                    <br/>
+                    والآن، لدينا فرصة ذهبية لسهم جديد متوقع صعوده 90% قريبًا، وفق تحليل دقيق للسوق.
                 </p>
             </div>
             <div class="col-md-5 form-col px-5 py-5 order-3 order-md-3" id="regForm">
